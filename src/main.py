@@ -146,7 +146,7 @@ if __name__ == '__main__':
         epochs=30
         conv.fit(X_train[:max_train], y_train[:max_train], batch_size=batch_size,epochs=epochs,shuffle=True,
                 validation_data=(X_val,y_val))                  
-        save=False
+        save=True
         if(save==True):
             #pickle.dump(conv, open(modelfname, 'wb'))
             conv.save(modelfname)
